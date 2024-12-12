@@ -84,20 +84,20 @@ const EmployeeTable = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mt-10 lg:mt-20 border-2 bg-white border-slate-300 rounded-lg shadow-lg">
-      <div className="flex flex-wrap justify-between items-center mb-8 lg:mb-4">
-        <h1 className=" text-lg">
+    <div className="container mx-auto p-4 mt-20 border-2 bg-white border-slate-300 rounded-lg shadow-lg">
+      <div className="flex flex-wrap justify-between gap-2 items-center mb-4 ">
+        <h1 className=" text-lg mb-2">
           <b>List of Employees</b>
         </h1>
         <input
           type="text"
           placeholder="Search by name"
-          className="border border-slate-900 p-2 rounded w-full sm:w-1/3 mb-2 sm:mb-0"
+          className="border  border-slate-900 p-2 rounded w-full sm:w-1/3 mb-2 sm:mb-0"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button
-          className="bg-black text-white px-4 py-2 rounded-lg w-full sm:w-auto border-2 border-black hover:bg-transparent hover:text-black  transition-all"
+          className="bg-black mb-2 text-white px-4 py-2 rounded-lg w-full sm:w-auto border-2 border-black hover:bg-transparent hover:text-black  transition-all"
           onClick={() => {
             setEditMode(false);
             resetForm();

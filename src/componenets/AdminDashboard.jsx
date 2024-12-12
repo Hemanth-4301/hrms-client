@@ -254,8 +254,8 @@ const AdminDashboard = () => {
       </div>
       {/* Leaves management */}
       <div className="bg-slate-100">
-        <div className="overflow-x-auto bg-white shadow-md rounded-lg p-5 border-2 border-slate-300 mx-10 mt-1 my-4 lg:my-10">
-          <div className="flex justify-between items-center gap-4  overflow-x-hidden">
+        <div className="overflow-x-auto bg-white shadow-md rounded-lg p-5 border-2 border-slate-300 mx-6  my-4 lg:my-10">
+          <div className="flex justify-between items-center gap-4 ">
             <h2 className="text-xl font-semibold mb-4 text-center">
               Employees Leave Requests
             </h2>
