@@ -1,0 +1,159 @@
+:root {
+  --color: white;
+  --bg-color: black;
+  --h-color: white;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background-color: var(--bg-color);
+}
+
+nav h1 {
+  margin-left: 10px; /* Aligns HRMS to the left */
+  font-size: 2rem; /* Adjust the font size as needed */
+  color: var(--color);
+  font-weight: bold; /* Optional, makes the text bold */
+}
+
+.link-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  width: 100%;
+  margin-left: auto; /* Pushes links to the right */
+}
+
+#sidebar-active,
+.close-sidebar,
+.open-sidebar {
+  display: none;
+}
+.open-sidebar {
+  margin-left: auto;
+}
+
+nav svg {
+  fill: white;
+}
+
+nav a {
+  color: var(--color);
+  height: 73%;
+  text-decoration: none;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  font-size: 1.1rem;
+  margin-right: 20px;
+  border-radius: 10px;
+  transition: all 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: black;
+  background-color: var(--h-color);
+}
+
+.mode:hover {
+  background-color: transparent;
+}
+
+@media (max-width: 920px) {
+  .logo {
+    margin-right: auto;
+  }
+
+  nav {
+    justify-content: flex-start; /* Aligns logo and HRMS to the left */
+  }
+
+  .link-container {
+    flex-direction: column;
+    align-items: flex-start;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    justify-content: flex-start;
+    z-index: 10;
+    position: fixed;
+    background-color: black;
+    transition: all 0.4s ease-in-out;
+  }
+
+  nav a {
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    justify-content: flex-start;
+    padding: 17px 30px;
+    border-radius: 0;
+  }
+
+  nav a:hover {
+    animation: appear1 0.2s ease-in-out 1;
+    color: black;
+    background-color: var(--h-color);
+  }
+
+  .mode {
+    margin-top: 20px;
+  }
+
+  @keyframes appear1 {
+    from {
+      opacity: 0;
+      scale: 0.97;
+    }
+    to {
+      opacity: 1;
+      scale: 1;
+    }
+  }
+
+  .open-sidebar,
+  .close-sidebar {
+    padding: 20px;
+    display: block;
+  }
+
+  #sidebar-active:checked ~ .link-container {
+    right: 0;
+  }
+}
+
+.mode,
+.mode:hover,
+.dark-btn {
+  height: 35px;
+  width: 35px;
+  border-radius: 25px;
+  padding: 0 30px;
+  margin-left: 30px;
+  border: 2px solid white;
+  background-color: black;
+  margin-right: 10px;
+}
+
+.light-btn,
+.light-btn:hover {
+  background-color: green;
+  border: 2px solid white;
+}
+
+a:active,
+a:focus,
+a.active {
+  color: black;
+  background-color: var(--h-color);
+}
