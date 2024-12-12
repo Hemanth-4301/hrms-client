@@ -81,6 +81,7 @@ const Leave = () => {
             <input
               type="date"
               value={form.date}
+              placeholder="date"
               onChange={(e) => setForm({ ...form, date: e.target.value })}
               className="w-full p-2 bg-slate-200 text-slate-600 rounded-md focus:outline-none focus:ring-2 focus:ring-slate-500"
               required
