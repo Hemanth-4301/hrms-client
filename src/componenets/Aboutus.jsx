@@ -17,11 +17,11 @@ const Aboutus = () => {
       >
         <h2 className="text-4xl font-bold mb-4">About Us</h2>
         <p className="text-md md:text-lg max-w-6xl mx-auto text-left px-2">
-          We are students from the CSE branch, NameX, NameY, and NameZ. We have
-          developed this as our minor project, the HRM System. It focuses on
-          employee management, including features like Admin management,
-          Employee leave applications, and other essential functionalities,
-          under the mentorship of NameXYZ Madam.
+          We are students from the CSE branch, Thejas M N,Mamatha S R,Raskshitha
+          M R and Rakesh R. We have developed this as our minor project, the HRM
+          System. It focuses on employee management, including features like
+          Admin management, Employee leave applications, and other essential
+          functionalities, under the mentorship of NameXYZ Madam.
         </p>
       </motion.div>
 
