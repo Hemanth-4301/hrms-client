@@ -254,8 +254,8 @@ const AdminDashboard = () => {
       </div>
       {/* Leaves management */}
       <div className="bg-slate-100">
-        <div className="bg-white shadow-md rounded-lg p-5 border-2 border-slate-300 mx-10  my-2 lg:my-10">
-          <div className="flex justify-between items-center gap-4  ">
+        <div className="overflow-x-auto bg-white shadow-md rounded-lg p-5 border-2 border-slate-300 mx-10 mt-1 my-4 lg:my-10">
+          <div className="flex justify-between items-center gap-4  overflow-x-hidden">
             <h2 className="text-xl font-semibold mb-4 text-center">
               Employees Leave Requests
             </h2>
@@ -268,7 +268,7 @@ const AdminDashboard = () => {
               Clear History
             </button>
           </div>
-          <table className="overflow-x-auto w-full bg-white border-collapse border border-gray-300">
+          <table className="w-full bg-white border-collapse border border-gray-300">
             <thead className="bg-gray-200">
               <tr>
                 <th className="p-2 border border-gray-300 text-center">
