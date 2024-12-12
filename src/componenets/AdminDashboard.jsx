@@ -310,7 +310,7 @@ const AdminDashboard = () => {
                     <td className="p-2 border border-gray-300 text-center">
                       {leave.status}
                     </td>
-                    <td className="p-2 border border-gray-300 text-center">
+                    <td className="p-2 border border-gray-300 text-center flex flex-wrap gap-2 items-center justify-center">
                       {leave.status === "Pending" && (
                         <>
                           <button
