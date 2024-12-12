@@ -14,7 +14,7 @@ const EmployeeDashboard = () => {
     if (email) {
       try {
         const response = await axios.get(
-          `http://localhost:5000/api/employeeDashboard/${email}`
+          `https://hrms-api-nph3.onrender.com/api/employeeDashboard/${email}`
         );
         const filteredDetails = Object.entries(response.data).reduce(
           (acc, [key, value]) => {
@@ -40,9 +40,12 @@ const EmployeeDashboard = () => {
     );
     if (confirmDelete && email) {
       axios
-        .delete(`http://localhost:5000/api/employeeDashboard/delete`, {
-          data: { email },
-        })
+        .delete(
+          `https://hrms-api-nph3.onrender.com/api/employeeDashboard/delete`,
+          {
+            data: { email },
+          }
+        )
         .then(() => {
           localStorage.removeItem("email");
           localStorage.removeItem("authToken");

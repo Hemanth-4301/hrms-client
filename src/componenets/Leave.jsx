@@ -15,7 +15,7 @@ const Leave = () => {
     try {
       const email = localStorage.getItem("email"); // Assume email is stored after login
       const response = await axios.get(
-        `http://localhost:5000/api/leave/employee/${email}`
+        `https://hrms-api-nph3.onrender.com/api/leave/employee/${email}`
       );
       setLeaveData(response.data);
     } catch (error) {
@@ -28,7 +28,10 @@ const Leave = () => {
   const applyLeave = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5000/api/leave/apply", form);
+      await axios.post(
+        "https://hrms-api-nph3.onrender.com/api/leave/apply",
+        form
+      );
       alert("Leave applied successfully");
       setForm({ employeeName: "", email: "", reason: "", date: "" });
       fetchLeaves();
@@ -36,8 +39,6 @@ const Leave = () => {
       console.error("Error applying for leave", error);
     }
   };
-
- 
 
   return (
     <div className="px-5  overflow-hidden bg-black">
@@ -123,8 +124,6 @@ const Leave = () => {
             ))}
           </ul>
         </div>
-
-        
       </motion.div>
     </div>
   );

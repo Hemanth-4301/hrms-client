@@ -19,7 +19,7 @@ const AdminLogin = () => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/admin/login",
+        "https://hrms-api-nph3.onrender.com/api/admin/login",
         {
           email,
           password,

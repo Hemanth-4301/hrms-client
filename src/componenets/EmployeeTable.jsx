@@ -19,7 +19,9 @@ const EmployeeTable = () => {
 
   const fetchEmployees = async () => {
     try {
-      const { data } = await axios.get("http://localhost:5000/api/employees");
+      const { data } = await axios.get(
+        "https://hrms-api-nph3.onrender.com/api/employees"
+      );
       setEmployees(data);
     } catch (error) {
       console.error("Error fetching employees", error);
@@ -30,11 +32,14 @@ const EmployeeTable = () => {
     try {
       if (editMode) {
         await axios.put(
-          `http://localhost:5000/api/employees/${editingEmployeeId}`,
+          `https://hrms-api-nph3.onrender.com/api/employees/${editingEmployeeId}`,
           newEmployee
         );
       } else {
-        await axios.post("http://localhost:5000/api/employees", newEmployee);
+        await axios.post(
+          "https://hrms-api-nph3.onrender.com/api/employees",
+          newEmployee
+        );
       }
       fetchEmployees();
       setShowModal(false);
@@ -48,7 +53,9 @@ const EmployeeTable = () => {
 
   const handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/employees/${id}`);
+      await axios.delete(
+        `https://hrms-api-nph3.onrender.com/api/employees/${id}`
+      );
       fetchEmployees();
     } catch (error) {
       console.error("Error deleting employee", error);

@@ -33,7 +33,7 @@ const Register = () => {
         alert("Password length should be atleast 6");
       } else {
         const response = await axios.post(
-          "http://localhost:5000/api/register",
+          "https://hrms-api-nph3.onrender.com/api/register",
           formData
         );
         alert("Registration successful!");

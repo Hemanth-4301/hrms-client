@@ -18,7 +18,9 @@ const AdminDashboard = () => {
 
   const fetchLeaves = async () => {
     try {
-      const response = await axios.get("http://localhost:5000/api/leave/admin");
+      const response = await axios.get(
+        "https://hrms-api-nph3.onrender.com/api/leave/admin"
+      );
       setLeaves(response.data);
     } catch (error) {
       console.error("Error fetching leaves", error);
@@ -28,20 +30,23 @@ const AdminDashboard = () => {
 
   const updateLeaveStatus = async (id, status) => {
     try {
-      await axios.put(`http://localhost:5000/api/leave/update/${id}`, {
-        status,
-      });
+      await axios.put(
+        `https://hrms-api-nph3.onrender.com/api/leave/update/${id}`,
+        {
+          status,
+        }
+      );
       fetchLeaves();
     } catch (error) {
       console.error("Error updating leave status", error);
     }
   };
 
-  const apiBaseURL = "http://localhost:5000/api/admin"; // Update to match your backend
+  const apiBaseURL = "https://hrms-api-nph3.onrender.com/api/admin"; // Update to match your backend
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/api/leave/admin")
+      .get("https://hrms-api-nph3.onrender.com/api/leave/admin")
       .then((res) => setLeaves(res.data))
       .catch((err) => console.error(err));
   }, []);
@@ -110,7 +115,7 @@ const AdminDashboard = () => {
   const handleDeleteLeaves = async () => {
     try {
       const response = await axios.delete(
-        "http://localhost:5000/api/leave/deleteAll"
+        "https://hrms-api-nph3.onrender.com/api/leave/deleteAll"
       );
       alert(response.data.message);
       fetchLeaves();
