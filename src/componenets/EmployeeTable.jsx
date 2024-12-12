@@ -84,8 +84,8 @@ const EmployeeTable = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 mt-20 border-2 bg-white border-slate-300 rounded-lg shadow-lg">
-      <div className="flex flex-wrap justify-between items-center mb-4 ">
+    <div className="container mx-auto p-4 mt-10 lg:mt-20 border-2 bg-white border-slate-300 rounded-lg shadow-lg">
+      <div className="flex flex-wrap justify-between items-center mb-8 lg:mb-4">
         <h1 className=" text-lg">
           <b>List of Employees</b>
         </h1>
